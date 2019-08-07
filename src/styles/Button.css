@@ -1,0 +1,74 @@
+/*----------------- general button style -------------*/
+button {
+	height: 60px;
+	border-radius: 3px;
+	color: #FFE5EC;
+	font-size: 2rem;
+	text-shadow: 0 1px rgba(255,255,255,.4);
+}
+
+/*----------------- numbers style -------------*/
+.number {
+	background-color: #C70039;
+	border: 1px solid #E4003B;
+}
+
+.number:hover {
+	background-color: #FE0042;
+}
+
+/*----------------- operators style -------------*/
+.operator {
+	background-color: #7E0021;
+	border: 1px solid #B2002E;
+}
+
+.operator:hover {
+	background-color: #980027;
+}
+
+/*-- placement of specific buttons within the grid --*/
+.key_0 {
+	grid-column-start: 2;
+	grid-row-start: 4;
+}
+
+.add {
+	grid-column-start: 4;
+	grid-row-start: 1;
+}
+
+.substract {
+	grid-column-start: 4;
+	grid-row-start: 2;
+}
+
+.multiply {
+	grid-column-start: 4;
+	grid-row-start: 3;
+}
+
+.divide {
+	grid-column-start: 4;
+	grid-row-start: 4;
+}
+
+.open_bracket {
+	grid-column-start: 1;
+	grid-row-start: 4;
+}
+
+.close_bracket {
+	grid-column-start: 3;
+	grid-row-start: 4;
+}
+
+.clear {
+	grid-column-start: 3;
+	grid-column-end: 5;
+}
+
+.equals {
+	grid-column-start: 1;
+	grid-column-end: 3;
+}
