@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./styles/App.css";
+import styles from "./styles/app.css";
 import buttonData from "./constants/buttons";
 import CalculatorButton from "./components/CalculatorButton";
 import Screen from "./components/Screen";
@@ -28,18 +28,18 @@ class Calculator extends Component {
 	createButtons = (data) => {
 		const buttons= [];
 		data.map((item, index) => {
-			buttons.push(<CalculatorButton key={index} label={item.label} className={`${item.name} ${item.type}`} onClick={this[item.funct]}/>);
+			buttons.push(<CalculatorButton key={index} label={item.label} name={item.name} type={item.type} onClick={this[item.funct]}/>);
 		})
 		return buttons;
 	}
 
 	render() {
 		return (
-			<div className="calculator-container">
-				<div className="screen-container">
+			<div className={styles.calculatorContainer}>
+				<div>
 					<Screen value={this.state.displayValue}/>
 				</div>
-				<div className="buttons-container">
+				<div className={styles.buttonsContainer}>
 					{this.createButtons(buttonData)}
 				</div>
 			</div>
@@ -50,9 +50,8 @@ class Calculator extends Component {
 class App extends Component{
 
   render(){
-
     return(
-      <div className="App">
+      <div className={styles.app}>
         <Calculator/>
       </div>
     );
