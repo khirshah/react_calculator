@@ -4,6 +4,17 @@ import buttonData from "./constants/buttons";
 import CalculatorButton from "./components/CalculatorButton";
 import Screen from "./components/Screen";
 
+class LinkToPortFolio extends Component {
+
+  render() {
+    return(
+      <div className={styles.link}>
+        <a className={styles.linktext} href="https://agnesmeri-portfolio.herokuapp.com/">Back to portfolio</a>
+      </div>
+    );
+  }
+}
+
 class Calculator extends Component {
 	state = {
 		displayValue: ""
@@ -51,8 +62,11 @@ class App extends Component{
 
   render(){
     return(
-      <div className={styles.app}>
-        <Calculator/>
+      <div className={styles.appContainer}>
+        <div className={styles.app}>
+          <Calculator/>
+        </div>
+        <LinkToPortFolio/>
       </div>
     );
   }
