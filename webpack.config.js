@@ -1,29 +1,22 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
-	mode: 'development',
-  entry: {
-    app: './src/index.js'
-  },
-  devtool: 'inline-source-map',
-  devServer: {
-    contentBase: './dist'
+  output: {
+    path: path.join(__dirname, "/dist"), // the bundle output path
+    filename: "bundle.js", // the name of the bundle
   },
   plugins: [
-  	new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       title: 'React calculator',
       template: './src/template/index.html',
       inject: false
     })
   ],
-  resolve: { extensions: ["*", ".js", ".jsx"] },
-  output: {
-    filename: '[name].bundle.js',
-    path: path.resolve(__dirname, 'dist')
+  devServer: {
+    port: 3030, // you can change the port
   },
+  resolve: { extensions: ["*", ".js", ".jsx"] },
    module: {
      rules: [
       {
