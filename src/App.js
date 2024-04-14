@@ -9,7 +9,7 @@ class LinkToPortFolio extends Component {
   render() {
     return(
       <div className={styles.link}>
-        <a className={styles.linktext} href="https://agnesmeri-portfolio.herokuapp.com/">Back to portfolio</a>
+        <a className={styles.linktext} href="https://agnes-meri-portfolio.vercel.app/">Back to portfolio</a>
       </div>
     );
   }
